@@ -1,0 +1,17 @@
+{
+  "name": "streamee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harrison Liddiard <omniaura5@gmail.com> (http://harrisonliddiard.com)",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "prompt": "^1.0.0",
+    "thepiratebay": "^1.3.3",
+    "webtorrent": "^0.98.8"
+  }
+}
