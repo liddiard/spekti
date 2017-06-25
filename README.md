@@ -13,7 +13,16 @@ Note: This application could be used to download content that infringes on copyr
 1. Install [webtorrent-cli](https://github.com/webtorrent/webtorrent-cli) globally: `npm install -g webtorrent-cli`
 2. Clone the repo, `cd` into it, and `npm install`.
 3. (Recommended) create a "watch" bash alias to `node` + [path to repo's `index.js`]. E.g., `alias watch='node ~/Developer/spekti/index.js'`.
-4. Watch something! Type "watch" + a TV show name to watch the latest episode, or type "watch" + a TV show name + a season and episode number in the format "sXXeXX" (like "s01e05") to watch a specific episode.
+
+That's it – now watch something! Type "watch" + a TV show name to watch the latest episode, or type "watch" + a TV show name + a season and episode number in the format "sXXeXX" (like "s01e05") to watch a specific episode.
+
+Examples:
+
+- `watch westworld` > plays the latest episode of Westworld
+- `watch rick and morty s02e03` > plays Rick and Morty episode "Auto Erotic Assimilation"
+- `watch arrested development s01e10` > plays Arrested Development episode "Pier Pressure"
+
+You get the idea.
 
 ## The name
 
