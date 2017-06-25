@@ -43,6 +43,11 @@ module.exports = {
           process.exit(1);
         }
         const sortedEpisodes = episodes
+        .filter(ep => {
+          return (typeof ep.absoluteNumber === 'number' &&
+                  typeof ep.firstAired === 'string' &&
+                  ep.firstAired.length);
+        })
         .sort((a, b) => {
           return (new Date(b.firstAired).getTime() - 
                   new Date(a.firstAired).getTime())
