@@ -17,4 +17,4 @@ Note: This application could be used to download content that infringes on copyr
 
 ## The name
 
-"Spekti" is an Esperanto translation of "watch". Not to be confused with the Finish rapper of the same name.
+"Spekti" is an Esperanto translation of "watch". Not to be confused with the Finnish rapper of the same name.
