@@ -6,4 +6,4 @@ Note: This application can be used to download content in infringement of copyri
 
 ## Demo
 
-[!demo](/example.gif)
+![demo](/example.gif)
