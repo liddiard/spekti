@@ -29,7 +29,7 @@ module.exports = {
         process.exit(1);
       }
       const show = shows[0];
-      console.log(`Found TV show ${show.seriesName} on ${show.network}.`);
+      console.log(`Found TV show "${show.seriesName}" on ${show.network}.`);
       return show.id;
     })
     .then(showId => {
