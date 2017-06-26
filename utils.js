@@ -69,5 +69,6 @@ module.exports = {
         return sortedEpisodes[sortedEpisodes.length-1];
       })
     })
+    .catch(err => console.error(err));
   }
 };
