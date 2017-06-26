@@ -19,23 +19,32 @@ module.exports = {
   },
   getLatestEpisode: function(query) {
     return request
-    .get('https://api.thetvdb.com/search/series')
-    .set({ Authorization: `Bearer ${config.tvdbJWT}` })
-    .query({ name: query })
+    .post('https://api.thetvdb.com/login')
+    .send(config.tvdb)
     .then(res => {
-      const shows = res.body.data;
-      if (!shows.length) {
-        console.error('No TV shows found matching query:', query);
-        process.exit(1);
-      }
-      const show = shows[0];
-      console.log(`Found TV show "${show.seriesName}" on ${show.network}.`);
-      return show.id;
-    })
-    .then(showId => {
+      const token = res.body.token;
       return request
-      .get(`https://api.thetvdb.com/series/${showId}/episodes`)
-      .set({ Authorization: `Bearer ${config.tvdbJWT}` })
+      .get('https://api.thetvdb.com/search/series')
+      .set({ Authorization: `Bearer ${token}` })
+      .query({ name: query })
+      .then(res => {
+        const shows = res.body.data;
+        if (!shows.length) {
+          console.error('No TV shows found matching query:', query);
+          process.exit(1);
+        }
+        const show = shows[0];
+        console.log(`Found TV show "${show.seriesName}" on ${show.network}.`);
+        return {
+          showId: show.id, 
+          token: token
+        };
+      })
+    })
+    .then(params => {
+      return request
+      .get(`https://api.thetvdb.com/series/${params.showId}/episodes`)
+      .set({ Authorization: `Bearer ${params.token}` })
       .then(res => {
         const episodes = res.body.data;
         if (!episodes.length) {
