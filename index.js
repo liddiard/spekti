@@ -22,8 +22,10 @@ else {
 
 function playFromQuery(query) {
   const quality = config.preferredQuality;
-  console.log(`Preferring ${quality}p quality.`);
-  search(`${query} ${quality}p`)
+  if (quality) {
+    console.log(`Preferring ${quality}p quality.`);
+  }
+  search(`${query} ${quality ? quality+'p' : ''}`)
   .then(torrents => {
     if (!torrents.length) {
       console.error('No torrents found matching query:', query);
