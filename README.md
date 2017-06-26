@@ -20,8 +20,8 @@ Note: This application could be used to download content that infringes on copyr
 {
   "preferredQuality": 720, // this property is optional. valid options: 720, 1080
   "tvdb": {
-    "apikey": "[YOUR API KEY]", // get it from http://thetvdb.com/?tab=userinfo
-    "userkey": "[YOUR USER KEY]", // a.k.a. "Account Identifier" from http://thetvdb.com/?tab=userinfo
+    "apikey": "[YOUR API KEY]", // get from http://thetvdb.com/?tab=userinfo after completing step #4
+    "userkey": "[YOUR USER KEY]", // "Account Identifier" field from http://thetvdb.com/?tab=userinfo
     "username": "[YOUR USERNAME]"
   }
 }
