@@ -12,8 +12,6 @@
     "cheerio": "^1.0.0-rc.1",
     "clear": "0.0.1",
     "moment": "^2.18.1",
-    "prompt": "^1.0.0",
-    "superagent": "^3.5.2",
-    "thepiratebay": "^1.4.2"
+    "superagent": "^3.5.2"
   }
 }
