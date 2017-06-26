@@ -62,7 +62,7 @@ module.exports = {
         });
         const today = moment().format('YYYY-MM-DD');
         for (let i = 0; i < sortedEpisodes.length; i++) {
-          if (sortedEpisodes[i].firstAired < today) {
+          if (sortedEpisodes[i].firstAired <= today) {
             return sortedEpisodes[i];
           }
         }
